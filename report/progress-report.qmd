@@ -9,7 +9,7 @@ Do not really know how to fit this into 2 pages.
 
 # Repository
 
-The repository is available at [https://github.com/jake-bounds/mini-internet](https://github.com/jake-bounds/mini-internet). 
+The repository is available at [https://github.com/jake-bounds/mini-internet](https://github.com/jake-bounds/mini-internet). The commit for submission is 111ffbb3fcfa30a132610fa52f07a1cf9c9dde01, or 'More readme'
 
 # Architecture
 
@@ -307,4 +307,4 @@ This is port 31217 to 31215, or Router A to Host 1. Its source address is Host 2
 
 # Contributions
 
-I am working alone
+I am working alone so I have done everything
