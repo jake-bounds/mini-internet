@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+topology/active.toml
+conditions/active.toml
+.vscode/run.env
+logs

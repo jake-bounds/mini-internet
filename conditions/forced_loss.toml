@@ -1,0 +1,5 @@
+[links."Router A"."Router B"]
+loss = 1
+
+[links."Router A"."Router C"]
+loss = 1

@@ -1,0 +1,59 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Select topology",
+            "type": "shell",
+            "command": "ln -sfn ${input:topology} topology/active.toml",
+            "problemMatcher": []
+        },
+        {
+            "label": "Select network conditions",
+            "type": "shell",
+            "command": "ln -sfn ${input:conditions} conditions/active.toml",
+            "problemMatcher": []
+        },
+        {
+            "label": "Get seed",
+            "type": "shell",
+            "command": "echo SEED=${input:seed} > .vscode/run.env",
+            "problemMatcher": []
+        },
+        {
+            "label": "Get run configuration",
+            "dependsOn": [
+                "Select topology",
+                "Select network conditions",
+                "Get seed"
+            ],
+            "dependsOrder": "sequence"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "topology",
+            "type": "pickString",
+            "description": "Topology config",
+            "options": [
+                "upper.toml",
+                "lower.toml"
+            ]
+        },
+        {
+            "id": "conditions",
+            "type": "pickString",
+            "description": "Network conditions",
+            "options": [
+                "none.toml",
+                "loss.toml",
+                "delay.toml"
+            ]
+        },
+        {
+            "id": "seed",
+            "type": "promptString",
+            "description": "Random seed",
+            "default": "1"
+        }
+    ]
+}

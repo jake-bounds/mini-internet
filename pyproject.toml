@@ -11,6 +11,8 @@ dependencies = []
 
 [project.scripts]
 mini-internet = "mini_internet:main"
+router = "mini_internet.router:main"
+host = "mini_internet.host:main"
 
 [build-system]
 requires = ["uv_build>=0.12.3,<0.13.0"]

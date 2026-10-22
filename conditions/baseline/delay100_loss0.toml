@@ -1,0 +1,7 @@
+[links."Router A"."Router B"]
+delay_ms = 100
+loss = 0
+
+[links."Router B"."Router A"]
+delay_ms = 100
+loss = 0

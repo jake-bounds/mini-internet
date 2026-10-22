@@ -1,0 +1,29 @@
+[hosts."Host 1"]
+port = 31215
+router_addr = "Router A"
+neighbors = ["Router A"]
+
+[hosts."Host 2"]
+port = 31216
+router_addr = "Router D"
+neighbors = ["Router D"]
+
+[routers."Router A"]
+port = 31217
+neighbors = ["Router B", "Router C", "Host 1", "Router D"]
+next_hop = {"Host 1" = "Host 1", "Host 2" = "Router C"}
+
+[routers."Router B"]
+port = 31218
+neighbors = ["Router A", "Router D"]
+next_hop = {"Host 1" = "Router A", "Host 2" = "Router D"}
+
+[routers."Router C"]
+port = 31219
+neighbors = ["Router A", "Router D"]
+next_hop = {"Host 1" = "Router A", "Host 2" = "Router A"}
+
+[routers."Router D"]
+port = 31220
+neighbors = ["Router B", "Router C", "Host 2"]
+next_hop = {"Host 1" = "Router C", "Host 2" = "Host 2"}

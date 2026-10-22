@@ -1,0 +1,115 @@
+{
+    "configurations": [
+        {
+            "name": "Host 1",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mini_internet.host",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/run.env",
+            "args": [
+                "--addr",
+                "Host 1",
+                "--topology",
+                "topology/active.toml",
+                "--network-conditions",
+                "conditions/active.toml"
+            ]
+        },
+        {
+            "name": "Host 2",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mini_internet.host",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/run.env",
+            "args": [
+                "--addr",
+                "Host 2",
+                "--topology",
+                "topology/active.toml",
+                "--network-conditions",
+                "conditions/active.toml"
+            ]
+        },
+        {
+            "name": "Router A",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mini_internet.router",
+            "console": "internalConsole",
+            "envFile": "${workspaceFolder}/.vscode/run.env",
+            "args": [
+                "--addr",
+                "Router A",
+                "--topology",
+                "topology/active.toml",
+                "--network-conditions",
+                "conditions/active.toml"
+            ]
+        },
+        {
+            "name": "Router B",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mini_internet.router",
+            "console": "internalConsole",
+            "envFile": "${workspaceFolder}/.vscode/run.env",
+            "args": [
+                "--addr",
+                "Router B",
+                "--topology",
+                "topology/active.toml",
+                "--network-conditions",
+                "conditions/active.toml"
+            ]
+        },
+        {
+            "name": "Router C",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mini_internet.router",
+            "console": "internalConsole",
+            "envFile": "${workspaceFolder}/.vscode/run.env",
+            "args": [
+                "--addr",
+                "Router C",
+                "--topology",
+                "topology/active.toml",
+                "--network-conditions",
+                "conditions/active.toml"
+            ]
+        },
+        {
+            "name": "Router D",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mini_internet.router",
+            "console": "internalConsole",
+            "envFile": "${workspaceFolder}/.vscode/run.env",
+            "args": [
+                "--addr",
+                "Router D",
+                "--topology",
+                "topology/active.toml",
+                "--network-conditions",
+                "conditions/active.toml"
+            ]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Mini Internet",
+            "preLaunchTask": "Get run configuration",
+            "configurations": [
+                "Router A",
+                "Router B",
+                "Router C",
+                "Router D",
+                "Host 1",
+                "Host 2"
+            ],
+            "stopAll": true
+        }
+    ]
+}

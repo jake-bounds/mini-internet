@@ -1,3 +1,6 @@
 {
-    "python.analysis.autoImportCompletions": true
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "standard",
+    "terminal.integrated.tabs.title": "${sequence}",
+    "python.terminal.activateEnvironment": false
 }
