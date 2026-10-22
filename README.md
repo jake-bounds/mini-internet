@@ -18,12 +18,18 @@ For a router
 
 ```bash
 uv run router --addr "Router A" --topology topology/upper.toml --network-conditions conditions/none.toml
+uv run router --addr "Router B" --topology topology/upper.toml --network-conditions conditions/none.toml
+uv run router --addr "Router C" --topology topology/upper.toml --network-conditions conditions/none.toml
+uv run router --addr "Router D" --topology topology/upper.toml --network-conditions conditions/none.toml
 ```
+
+You will probably need to run each command in different terminals or termux.
 
 For a host
 
 ```bash
 uv run host --addr "Host 1" --topology topology/upper.toml --network-conditions conditions/none.toml
+uv run host --addr "Host 2" --topology topology/upper.toml --network-conditions conditions/none.toml
 ```
 
 You cannot send input to a router. You can send a message from a host by sending a line "<destination address>:<message>"
